@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python
-    - pep8 >=1.5.7
+    - pycodestyle >=2.3
 
 test:
   commands:
