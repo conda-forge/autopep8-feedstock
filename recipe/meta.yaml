@@ -1,32 +1,24 @@
-{% set name = "autopep8" %}
 {% set version = "1.4" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "655e3ee8b4545be6cfed18985f581ee9ecc74a232550ee46e9797b6fbf4f336d" %}
-{% set build = 0 %}
 
 package:
-  name: {{ name }}
+  name: autopep8
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/a/autopep8/autopep8-{{ version }}.tar.gz
+  sha256: 655e3ee8b4545be6cfed18985f581ee9ecc74a232550ee46e9797b6fbf4f336d
 
 build:
   noarch: python
   entry_points:
     - autopep8 = autopep8:main
-
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - pycodestyle >=2.3
@@ -47,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - ocefpaf
