@@ -1,4 +1,4 @@
-{% set version = "1.5" %}
+{% set version = "1.5.1" %}
 
 package:
   name: autopep8
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/autopep8/autopep8-{{ version }}.tar.gz
-  sha256: 0f592a0447acea0c2b0a9602be1e4e3d86db52badd2e3c84f0193bfd89fd3a43
+  sha256: cc6be1dfd46f2c7fa00e84a357f1a269683985b09eaffb47654ed551194399eb
 
 build:
   noarch: python
   entry_points:
     - autopep8 = autopep8:main
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   build:
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: 'A tool that automatically formats Python code to conform to the PEP 8 style guide'
+  summary: A tool that automatically formats Python code to conform to the PEP 8 style guide
   dev_url: https://github.com/hhatto/autopep8
 
 extra:
