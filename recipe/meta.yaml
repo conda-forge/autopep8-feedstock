@@ -10,23 +10,27 @@ source:
 
 build:
   noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - autopep8 = autopep8:main
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
-
 requirements:
   build:
     - python
     - pip
   run:
     - python
-    - pycodestyle >=2.3
+    - pycodestyle >=2.5.0
 
 test:
+  imports:
+    - autopep8
   commands:
+    - pip check
     - autopep8 --help
-    - autopep8 --version
+  requires:
+    - pip
+
 
 about:
   home: https://github.com/hhatto/autopep8
