@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: autopep8
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/autopep8/autopep8-{{ version }}.tar.gz
-  sha256: cc6be1dfd46f2c7fa00e84a357f1a269683985b09eaffb47654ed551194399eb
+  sha256: 152fd8fe47d02082be86e05001ec23d6f420086db56b17fc883f3f965fb34954
 
 build:
   noarch: python
