@@ -1,26 +1,29 @@
-{% set version = "1.5.2" %}
+{% set name = "autopep8" %}
+{% set version = "1.5.3" %}
 
 package:
-  name: autopep8
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/autopep8/autopep8-{{ version }}.tar.gz
-  sha256: 152fd8fe47d02082be86e05001ec23d6f420086db56b17fc883f3f965fb34954
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 60fd8c4341bab59963dafd5d2a566e94f547e660b9b396f772afe67d8481dbf0
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
   entry_points:
     - autopep8 = autopep8:main
+  script: {{ PYTHON }} -m pip install . -vv
+
 requirements:
   build:
     - python
     - pip
   run:
     - python
-    - pycodestyle >=2.5.0
+    - pycodestyle >=2.6
+    - toml
 
 test:
   imports:
@@ -31,13 +34,12 @@ test:
   requires:
     - pip
 
-
 about:
   home: https://github.com/hhatto/autopep8
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: A tool that automatically formats Python code to conform to the PEP 8 style guide
+  summary: 'A tool that automatically formats Python code to conform to the PEP 8 style guide'
   dev_url: https://github.com/hhatto/autopep8
 
 extra:
