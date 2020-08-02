@@ -5,7 +5,7 @@ Home: https://github.com/hhatto/autopep8
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A tool that automatically formats Python code to conform to the PEP 8 style guide
 
