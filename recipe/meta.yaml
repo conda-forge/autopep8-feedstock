@@ -10,7 +10,7 @@ source:
   sha256: 44f0932855039d2c15c4510d6df665e4730f2b8582704fa48f9c55bd3e17d979
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - autopep8 = autopep8:main
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pycodestyle >=2.7
+    - pycodestyle >=2.8
     - toml
 
 test:
