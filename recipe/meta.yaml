@@ -22,8 +22,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pycodestyle >=2.8
-    - toml
+    - pycodestyle >=2.9.1
+    - tomli
 
 test:
   imports:
