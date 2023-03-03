@@ -1,11 +1,11 @@
-About autopep8
-==============
+About autopep8-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autopep8-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/hhatto/autopep8
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autopep8-feedstock/blob/main/LICENSE.txt)
 
 Summary: A tool that automatically formats Python code to conform to the PEP 8 style guide
 
