@@ -23,6 +23,7 @@ requirements:
   run:
     - python >=3.6
     - pycodestyle >=2.10.0
+    - packaging
     - tomli
 
 test:
