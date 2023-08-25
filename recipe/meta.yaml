@@ -1,5 +1,5 @@
 {% set name = "autopep8" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f9849cdd62108cb739dbcdbfb7fdcc9a30d1b63c4cc3e1c1f893b5360941b61c
+  sha256: ba4901621c7f94c6fce134437d577009886d5e3bfa46ee64e1d1d864a5b93cc2
 
 build:
   number: 0
@@ -22,7 +22,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pycodestyle >=2.9.1
+    - pycodestyle >=2.10.0
+    - packaging
     - tomli
 
 test:
