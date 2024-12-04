@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - autopep8 = autopep8:main
-  - setuptools
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
 
 requirements:
   host:
