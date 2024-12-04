@@ -14,11 +14,12 @@ build:
   noarch: python
   entry_points:
     - autopep8 = autopep8:main
-  script: {{ PYTHON }} -m pip install . -vv
+  - setuptools
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
     - python >={{ python_min }}
